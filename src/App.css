@@ -1,0 +1,82 @@
+body,
+button {
+  font-family: JetBrains Mono;
+  font-size: 24px;
+}
+
+.calculator {
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgb(50, 50, 50);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.display {
+  width: 95%;
+  height: 60px;
+  font-size: 2rem;
+  text-align: right;
+  padding: 10px;
+
+  background: #333;
+  color: whitesmoke;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  overflow-x: auto;
+}
+
+/* Button grid */
+
+.keypad-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Base Button styles */
+
+button {
+  width: 100%;
+  padding: 15px;
+  /* font-size: 1.5rem; */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: rgba(255, 166, 0, 0.874);
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  background: rgba(255, 166, 0, 0.493);
+}
+
+.operator {
+  background: rgb(67, 67, 67);
+  color: whitesmoke;
+}
+
+.operator:hover {
+  background: black;
+}
+
+.equals {
+  background: #2ecc71;
+  color: aliceblue;
+}
+
+.equals:hover {
+  background: #2ecc70d4;
+}
+
+.clear {
+  background: red;
+  color: white;
+}
+
+.clear:hover {
+  background: rgba(255, 0, 0, 0.5);
+}
