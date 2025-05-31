@@ -42,7 +42,7 @@ button {
   width: 100%;
   padding: 15px;
   /* font-size: 1.5rem; */
-  border: none;
+  border: 2px solid white none;
   border-radius: 5px;
   cursor: pointer;
   background: rgba(255, 166, 0, 0.874);
@@ -52,6 +52,7 @@ button {
 
 button:hover {
   background: rgba(255, 166, 0, 0.493);
+  border: 2px solid white;
 }
 
 .operator {
