@@ -7,7 +7,7 @@ function useKeyboardInput(handleClick, setInputValue, inputValue) {
             console.log(key)
 
             if (key === 'Enter' || key === '=') {
-                if (inputValue.trim() !== "" && !/[\+\-\*\/\.]$/.test(inputValue)) {
+                if (inputValue.trim() !== "" && !/[+\-*/.]$/.test(inputValue)) {
                     handleClick('=');
                 }
             } else if ((key === 'Escape') || (key === 'Control' && (key === 'c' || key === 'C'))) {
