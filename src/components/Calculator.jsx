@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { evaluate } from 'mathjs';
 import Keypad from './Keypad';  // Import Keypad component
 import useKeyboardInput from '../functions/useKeyboardInput';
+import handleAndSetInputVals from '../functions/handleAndSetInputVals';
 
 const keypadButtons = [
     "7", "8", "9", "/",
@@ -15,9 +16,12 @@ function Calculator() {
     const [inputValue, setInputValue] = useState("");
 
     function handleClick(buttonValue) {
+        // console.log("btn val " + buttonValue)
+
         if (buttonValue === 'C') {
             setInputValue("");
-        } else if (buttonValue === '=') {
+        }
+        else if (buttonValue === '=') {
             if (inputValue.trim() === "") return;  // prevent evaluating empty string
             try {
                 const result = evaluate(inputValue).toString();
@@ -26,9 +30,11 @@ function Calculator() {
                 setInputValue("Error");
                 console.log(error);
             }
-        } else {
-            setInputValue((prevValue) => prevValue + buttonValue);
         }
+        else {
+            handleAndSetInputVals(inputValue, buttonValue, setInputValue)
+        }
+        // console.log("input val " + inputValue)
     }
 
     // handle input from keyboard 
