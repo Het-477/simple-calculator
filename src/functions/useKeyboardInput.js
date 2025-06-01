@@ -4,7 +4,7 @@ function useKeyboardInput(handleClick, setInputValue, inputValue) {
     useEffect(() => {
         const handleKeyDown = (e) => {
             const key = e.key;
-            console.log(key)
+            // console.log(key) // logging 
 
             if (key === 'Enter' || key === '=') {
                 if (inputValue.trim() !== "" && !/[+\-*/.]$/.test(inputValue)) {
